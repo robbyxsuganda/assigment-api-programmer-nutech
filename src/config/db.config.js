@@ -16,6 +16,9 @@ require("dotenv").config();
 const pool = new Pool({
   connectionString: process.env.DB_URI,
   idleTimeoutMillis: 1000,
+  ssl: {
+    rejectUnauthorized: false,
+  },
 });
 
 module.exports = pool;

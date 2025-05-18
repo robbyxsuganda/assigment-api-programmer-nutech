@@ -10,7 +10,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 app.get("/", (req, res) => {
-  res.status(200).res.json({ message: "Success", data: null });
+  res.status(200).json({ message: "Success", data: null });
 });
 
 app.use("/api", router);
