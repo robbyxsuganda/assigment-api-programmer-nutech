@@ -9,6 +9,10 @@ app.use(cors());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
+app.get("/", (req, res) => {
+  res.status(200).res.json({ message: "Success", data: null });
+});
+
 app.use("/api", router);
 
 app.listen(port, () => {
